@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="VirtualDoorman.LoginPage">
+    <ContentPage.Content>
+        <AbsoluteLayout x:Name="MainLayout">
+           <Image 
+                Source="https://media.giphy.com/media/8uiZLn37DZIXu/giphy.gif" 
+                Aspect="AspectFill" 
+                AbsoluteLayout.LayoutBounds="0, 0, 1, 1" 
+                AbsoluteLayout.LayoutFlags="All" />
+            <StackLayout 
+                VerticalOptions="Center" 
+                Spacing="20"
+                AbsoluteLayout.LayoutBounds="0, 0.25, 1, 0.5" 
+                AbsoluteLayout.LayoutFlags="All" >
+                <StackLayout.Padding>
+                    <OnIdiom 
+                        x:TypeArguments="Thickness">
+                        <OnIdiom.Phone>40,0,40,0</OnIdiom.Phone>
+                        <OnIdiom.Tablet>140,150,140,0</OnIdiom.Tablet>
+                    </OnIdiom>
+                </StackLayout.Padding>
+                <StackLayout
+                    VerticalOptions="CenterAndExpand"
+                    Orientation="Vertical"
+                    Padding="10" 
+                    Spacing="30" >
+
+                    <Label 
+                        Text="Virtual Doorman" 
+                        TextColor="#ff2d55"
+                        FontSize="32" 
+                        FontAttributes="Bold" 
+                        HorizontalOptions="Center" />
+                    <Label 
+                        Text="Technology Opens Another Door" 
+                        TextColor="Black"
+                        FontSize="17" 
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"/>
+
+                    <ActivityIndicator 
+                            x:Name="activitySpinner" 
+                            Color="Red" 
+                            IsRunning="true" />
+                        
+                    <Frame
+                        Padding="10"
+                        BackgroundColor="#B043055"
+                        HasShadow="false">
+                        <StackLayout
+                            Orientation="Vertical"
+                            Spacing="10">
+                            <Entry 
+                                x:Name="entryUsername"
+                                Placeholder="Username"
+                                HeightRequest="40"
+                                TextColor="Black" />
+                            <Entry
+                                x:Name="entryPassword"
+                                Placeholder="Password"
+                                IsPassword="true"
+                                HeightRequest="40"
+                                TextColor="Black" />
+                            
+                        </StackLayout>
+                    </Frame>
+                    <StackLayout 
+                        Orientation="Horizontal">
+                        <Button
+                            Text="Login" 
+                            TextColor="White" 
+                            FontAttributes="Bold"
+                            FontSize="20"
+                            HorizontalOptions="FillAndExpand"
+                            BackgroundColor="#F49131" 
+                            Clicked="OnLoginClicked"
+                            x:Name="btnLogin"/>
+                        <Button
+                            x:Name="btnRegister"
+                            Clicked="OnSignUpClicked"
+                            Text="Sign Up" 
+                            TextColor="White" 
+                            FontAttributes="Bold"
+                            FontSize="20"
+                            HorizontalOptions="FillAndExpand"
+                            BackgroundColor="#F49131" />
+                    </StackLayout>
+
+                </StackLayout>
+            </StackLayout>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

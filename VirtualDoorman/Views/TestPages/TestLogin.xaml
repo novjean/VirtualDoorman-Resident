@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="VirtualDoorman.Views.TestPages.TestLogin">
+	<ContentPage.Content>
+        <StackLayout
+            Orientation="Vertical"
+            Padding="20" 
+            Spacing="30" >
+            <Frame
+                BackgroundColor="#B043055"
+                HasShadow="false">
+                <StackLayout
+                    Orientation="Vertical"
+                    Spacing="10">
+                    <Entry 
+                        Placeholder="Email"
+                        HeightRequest="40"
+                        TextColor="Black" />
+                    <Entry 
+                        Placeholder="Password"
+                        HeightRequest="40"
+                        TextColor="Black" />
+                    
+                </StackLayout>
+            </Frame>
+            <Button
+                Text="Login" 
+                TextColor="White" 
+                FontAttributes="Bold"
+                FontSize="20"
+                HorizontalOptions="FillAndExpand"
+                BackgroundColor="#F49131" />
+        </StackLayout>
+	</ContentPage.Content>
+</ContentPage>

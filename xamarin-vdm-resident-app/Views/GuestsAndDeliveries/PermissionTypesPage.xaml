@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    Title="Select Permission"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="VirtualDoorman.Views.GuestsAndDeliveries.PermissionTypesPage">
+	<ContentPage.Content>
+        <StackLayout
+            Padding="16, 5">
+            <Label 
+                Text="Pick the permission required for the guest."/>
+            <ListView
+                x:Name="listView" />
+        </StackLayout>
+	</ContentPage.Content>
+</ContentPage>

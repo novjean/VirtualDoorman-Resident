@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    Title="Guests/Deliveries"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="VirtualDoorman.Views.GuestsAndDeliveries.GuestsAndDeliveriesMainPage">
+	<ContentPage.Content>
+        <StackLayout
+            VerticalOptions="StartAndExpand"
+            Padding="0,10,0,0">
+            <StackLayout
+                Padding="5" >
+                <BoxView 
+                    HeightRequest="10" 
+                    Color="#f0f0f0" />
+                <Button 
+                    Text="View Guests" 
+                    FontSize="16" 
+                    FontAttributes="Bold" 
+                    BorderWidth="1" 
+                    BorderColor="#dedede" 
+                    TextColor="#1e1e1e" 
+                    Clicked="OnViewGuestsClicked"/>
+
+                <BoxView 
+                    HeightRequest="10" 
+                    Color="#f0f0f0" />
+                <Button 
+                    Text="Add Guests" 
+                    FontSize="16" 
+                    FontAttributes="Bold" 
+                    BorderWidth="1" 
+                    BorderColor="#dedede" 
+                    TextColor="#1e1e1e" 
+                    Clicked="OnAddGuestsClicked"/>
+
+                <BoxView 
+                    HeightRequest="10" 
+                    Color="#f0f0f0" />
+                <Button 
+                    Text="View Business" 
+                    FontSize="16" 
+                    FontAttributes="Bold" 
+                    BorderWidth="1" 
+                    BorderColor="#dedede" 
+                    TextColor="#1e1e1e" 
+                    Clicked="OnViewBusinessesClicked"/>
+
+                <BoxView 
+                    HeightRequest="10" 
+                    Color="#f0f0f0" />
+                <Button 
+                    Text="Add Business" 
+                    FontSize="16" 
+                    FontAttributes="Bold" 
+                    BorderWidth="1" 
+                    BorderColor="#dedede" 
+                    TextColor="#1e1e1e" 
+                    Clicked="OnAddBusinessClicked"/>
+            </StackLayout>
+        </StackLayout>
+	</ContentPage.Content>
+</ContentPage>

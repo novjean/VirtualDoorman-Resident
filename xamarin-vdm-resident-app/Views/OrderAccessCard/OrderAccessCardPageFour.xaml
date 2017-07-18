@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    Title="Payment"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="VirtualDoorman.Views.OrderAccessCard.OrderAccessCardPageFour">
+	<ContentPage.Content>
+         <StackLayout>
+            <TableView
+                HasUnevenRows="true"
+                Intent="Form">
+                <TableView.Root>
+                    <TableSection
+                        Title="Enter Payment Information">
+                        <ViewCell 
+                            Height="45">
+                            <StackLayout
+                                Orientation="Vertical"
+                                Padding="16,5">
+                                <StackLayout
+                                    Orientation="Horizontal">
+                                    <Label
+                                        Text="Select Card"
+                                        VerticalOptions="Center"/>
+                                    <Picker
+                                        x:Name="pickerCard"
+                                        Title="Select Card"
+                                        HorizontalOptions="EndAndExpand"
+                                        SelectedIndexChanged="OnCardPickerSelected"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                        <EntryCell
+                            x:Name="cardFullName"
+                            Label="Name"
+                            Placeholder="John Doe"
+                            HorizontalTextAlignment="End"/>
+                        <ViewCell
+                            Height="45">
+                            <StackLayout
+                                Orientation="Horizontal"
+                                Padding="16,5">
+                                <Label
+                                    Text="Card Type"
+                                    VerticalOptions="Center" />
+                                <Picker
+                                    x:Name="pickerCardType"
+                                    Title="Card Type"
+                                    HorizontalOptions="EndAndExpand" />
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell
+                            Height="45">
+                            <StackLayout
+                                Orientation="Horizontal"
+                                Padding="16,5">
+                                <Label
+                                    Text="Month"
+                                    VerticalOptions="Center" />
+                                <Picker
+                                    x:Name="pickerCardMonth"
+                                    Title="Month"
+                                    HorizontalOptions="EndAndExpand" />
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell
+                            Height="45">
+                            <StackLayout
+                                Orientation="Horizontal"
+                                Padding="16,5">
+                                <Label
+                                    Text="Year"
+                                    VerticalOptions="Center" />
+                                <Picker
+                                    x:Name="pickerCardYear"
+                                    Title="Year"
+                                    HorizontalOptions="EndAndExpand" />
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                    <TableSection
+                        Title="Billing Information">
+                        <EntryCell />
+                    </TableSection>
+                </TableView.Root>
+            </TableView>
+            <Button
+                Text="Review Order" />
+        </StackLayout>
+	</ContentPage.Content>
+</ContentPage>

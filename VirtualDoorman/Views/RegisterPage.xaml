@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="Sign Up" 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="VirtualDoorman.RegisterPage">
+    <StackLayout>
+        <TableView Intent="Form">
+            <TableRoot>
+                
+                <TableSection 
+                    Title="Personal Details">
+                    <EntryCell 
+                        x:Name="firstName" 
+                        Label="First name" 
+                        Text="" />
+                    <EntryCell 
+                        x:Name="lastName" 
+                        Label="Last name" 
+                        Text="" />
+                </TableSection>
+                
+                <TableSection 
+                    Title="Contact">
+                    <EntryCell x:Name="primaryEmail" Label="Primary Email" Text="" Keyboard="Email" />
+                    <EntryCell x:Name="secondaryEmail" Label="Secondary Email" Text="" Keyboard="Email" />
+                    <EntryCell x:Name="primaryPhone" Label="Phone" Text="" Keyboard="Telephone" />
+                    <ViewCell>
+                        <StackLayout
+                            Orientation="Horizontal"
+                            Padding="16,5">
+                            <Label 
+                                Text="Cell Provider" 
+                                VerticalOptions="Center"/>
+                            <Picker
+                                x:Name="pickerCellProvider"
+                                HorizontalOptions="EndAndExpand"
+                                WidthRequest="100"
+                                SelectedIndex="1">
+                            </Picker>
+                        </StackLayout>
+                    </ViewCell>
+                    <EntryCell x:Name="cellPhone" Label="Cell Phone" Text="" Keyboard="Telephone" />
+                </TableSection>
+                <TableSection Title="User Details">
+                    <EntryCell x:Name="username" Label="Username" Text="" />
+                    <EntryCell x:Name="password" Label="Password" Text="" />
+                    <EntryCell x:Name="repeatPassword" Label="Confirm Password" Text="" />
+                </TableSection>
+                <TableSection>
+                    <ViewCell>
+                        <Button Text="Next" Clicked="OnNextClicked" />
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    Title="Shipping"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="VirtualDoorman.Views.OrderAccessCard.OrderAccessCardPageThree">
+	<ContentPage.Content>
+        <StackLayout>
+            <TableView
+                HasUnevenRows="true"
+                Intent="Form">
+                <TableView.Root>
+                    <TableSection
+                        Title="Enter Shipping Information">
+                        <EntryCell 
+                            x:Name="shippingFullName" Label="Full Name" Text="" />
+                    </TableSection>
+                    
+                    <TableSection 
+                        Title="Shipping Address">
+                        <EntryCell 
+                            x:Name="shippingStreet" 
+                            Label="Street" 
+                            Text="" 
+                            Keyboard="Default" />
+                        <EntryCell 
+                            x:Name="shippingApartmentNumber" 
+                            Label="Apartment #" 
+                            Text="" 
+                            Keyboard="Default" />
+                        <ViewCell>
+                            <StackLayout 
+                                Orientation="Horizontal"
+                                Padding="16, 5">
+                                <Label 
+                                    Text="State" 
+                                    VerticalOptions="Center"/>
+                                <Picker 
+                                    x:Name="statePicker" 
+                                    Title="Select State"
+                                    HorizontalOptions="EndAndExpand">
+                                </Picker>
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout 
+                                Orientation="Horizontal"
+                                Padding="16, 5">
+                                <Label 
+                                    Text="City" 
+                                    VerticalOptions="Center"/>
+                                <Picker 
+                                    x:Name="cityPicker" 
+                                    Title="Select City"
+                                    HorizontalOptions="EndAndExpand">
+                                </Picker>
+                            </StackLayout>
+                        </ViewCell>
+                        <EntryCell 
+                            x:Name="shippingZip" 
+                            Label="Zip Code" 
+                            Text="" 
+                            Keyboard="Numeric" />
+                    </TableSection>
+                    <TableSection
+                        Title="Contact">
+                        <EntryCell 
+                            x:Name="shippingPhone" 
+                            Label="Phone" 
+                            Text="" 
+                            Keyboard="Telephone" />
+                    </TableSection>
+                </TableView.Root>
+            </TableView>
+            <Button
+                Text="Continue"
+                Clicked="OnContinueClicked" />
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    Title="Guests/Deliveries"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="VirtualDoorman.Views.GuestsAndDeliveries.GuestsAndDeliveriesMainPage">
+    <ContentPage.Padding>
+        <OnPlatform 
+            x:TypeArguments="Thickness" 
+            iOS="0, 0, 0, 0">
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout
+            VerticalOptions="StartAndExpand">
+            <StackLayout
+                HorizontalOptions="FillAndExpand">
+                <Image
+                    Source="http://i.imgur.com/5ZoSvaI.jpg"
+                    Aspect="Fill"/>
+            </StackLayout>
+            <StackLayout>
+                <BoxView 
+                    HeightRequest="1" 
+                    Color="#f0f0f0" />
+
+                <StackLayout
+                    Orientation="Horizontal"
+                    Padding="10,0,5,0">
+                    <Image
+                        Source="viewGuest.png"
+                        Aspect="AspectFit"
+                        HorizontalOptions="Start"/>
+                    <Button 
+                        Text="View Guests" 
+                        FontSize="16" 
+                        FontAttributes="Bold" 
+                        TextColor="#1e1e1e" 
+                        HorizontalOptions="FillAndExpand"
+                        Clicked="OnViewGuestsClicked"/>
+                    <Image
+                        Source="Right.png"
+                        Aspect="AspectFit" 
+                        HorizontalOptions="End"/>
+                </StackLayout>
+                
+
+
+                <BoxView 
+                    HeightRequest="1" 
+                    Color="#f0f0f0" />
+                <Button 
+                    Text="Add Guests" 
+                    FontSize="16" 
+                    FontAttributes="Bold" 
+                    BorderWidth="1" 
+                    BorderColor="#dedede" 
+                    TextColor="#1e1e1e" 
+                    Clicked="OnAddGuestsClicked"/>
+
+                <BoxView 
+                    HeightRequest="1" 
+                    Color="#f0f0f0" />
+                <Button 
+                    Text="View Business" 
+                    FontSize="16" 
+                    FontAttributes="Bold" 
+                    BorderWidth="1" 
+                    BorderColor="#dedede" 
+                    TextColor="#1e1e1e" 
+                    Clicked="OnViewBusinessesClicked"/>
+
+                <BoxView 
+                    HeightRequest="1" 
+                    Color="#f0f0f0" />
+                <Button 
+                    Text="Add Business" 
+                    FontSize="16" 
+                    FontAttributes="Bold" 
+                    BorderWidth="1" 
+                    BorderColor="#dedede" 
+                    TextColor="#1e1e1e" 
+                    Clicked="OnAddBusinessClicked"/>
+            </StackLayout>
+        </StackLayout>
+	</ContentPage.Content>
+</ContentPage>

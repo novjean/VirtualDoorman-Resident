@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    Title="Order Access Card"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="VirtualDoorman.Views.OrderAccessCard.OrderAccessPageTwo">
+	<ContentPage.Content>
+        <StackLayout>
+            <TableView
+                HasUnevenRows="true"
+                Intent="Form">
+                <TableView.Root>
+                    <TableSection
+                        Title="Key User Details">
+                        <ViewCell >
+                            <StackLayout 
+                                Orientation="Horizontal"
+                                Padding="16, 5">
+                                <Label 
+                                    Text="Name" 
+                                    VerticalOptions="Center"/>
+                                <Picker 
+                                    Title="Card/Fob User"
+                                    x:Name="cardUserPicker"
+                                    HorizontalOptions="EndAndExpand" />   
+                            </StackLayout>
+                        </ViewCell>  
+                    </TableSection>
+                </TableView.Root>
+            </TableView>
+        </StackLayout>
+	</ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    Title="Home" 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ic="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+    x:Class="VirtualDoorman.MainPage">
+    <ContentPage.Padding>
+        <OnPlatform 
+            x:TypeArguments="Thickness" 
+            iOS="0, 20, 0, 0">
+        </OnPlatform>
+    </ContentPage.Padding>
+    <StackLayout>
+        <StackLayout 
+            HorizontalOptions="CenterAndExpand"
+            Padding="10">
+            <Label 
+                x:Name="welcomeTitle" 
+                Text="Welcome" 
+                FontSize="20" 
+                TextColor="Maroon"
+                FontAttributes="Bold"/>
+        </StackLayout>
+        
+<!--    Adding the Image on the Left -->   
+<!--        <StackLayout 
+            Orientation="Horizontal" 
+            Padding="15,0,10,0" 
+            Spacing="20">
+            <ic:CircleImage 
+                WidthRequest="22" 
+                HeightRequest="22"
+                Aspect="AspectFit" 
+                HorizontalOptions="Start"
+                Source="guestsdeliveries.png" />
+            <Button 
+                Text="Guests/Deliveries" 
+                FontSize="20" 
+                FontAttributes="Bold" 
+                TextColor="#1e1e1e" />
+        </StackLayout>-->
+        
+        <StackLayout 
+            VerticalOptions="StartAndExpand"
+            Padding="0, 10, 0, 0" >
+            <StackLayout 
+                Padding="5">
+
+                <BoxView 
+                    HeightRequest="10" 
+                    Color="#f0f0f0" />
+                <Button 
+                    Text="Guests/Deliveries" 
+                    FontSize="16" 
+                    FontAttributes="Bold" 
+                    BorderWidth="1" 
+                    BorderColor="#dedede" 
+                    TextColor="#1e1e1e" 
+                    Clicked="OnGuestsDeliveriesClicked"/>
+                
+                <BoxView 
+                    Margin="0,5" 
+                    HeightRequest="1" 
+                    Color="#f0f0f0" />
+                <Button 
+                    Text="Recent Activity" 
+                    FontSize="16" 
+                    FontAttributes="Bold" 
+                    BorderWidth="2" 
+                    BorderColor="#dedede" 
+                    TextColor="#1e1e1e" 
+                    Clicked="OnRecentActivityClicked"/>
+                
+                <BoxView 
+                    Margin="0,5" 
+                    HeightRequest="1" 
+                    Color="#f0f0f0" />
+                <Button 
+                    Text="Order Access Cards" 
+                    FontSize="16" 
+                    FontAttributes="Bold" 
+                    BorderWidth="2" 
+                    BorderColor="#dedede" 
+                    TextColor="#1e1e1e" 
+                    Clicked="OrderAccessCardClicked"/>
+                
+                <BoxView 
+                    Margin="0,5" 
+                    HeightRequest="1" 
+                    Color="#f0f0f0" />
+                <Button 
+                    Text="Contacts" 
+                    FontSize="16" 
+                    FontAttributes="Bold" 
+                    BorderWidth="2" 
+                    BorderColor="#dedede" 
+                    TextColor="#1e1e1e"
+                    Clicked="OnContactsClicked"/>
+                
+                <BoxView 
+                    Margin="0,5" 
+                    HeightRequest="1" 
+                    Color="#f0f0f0" />
+                <Button 
+                    Text="My Account" 
+                    FontSize="16" 
+                    FontAttributes="Bold" 
+                    BorderWidth="2" 
+                    BorderColor="#dedede" 
+                    TextColor="#1e1e1e" />
+                
+                <BoxView
+                    Margin="0,5" 
+                    HeightRequest="1" 
+                    Color="#f0f0f0" />
+                <Button 
+                    Text="Intercom" 
+                    FontSize="16" 
+                    FontAttributes="Bold" 
+                    BorderWidth="2" 
+                    BorderColor="#dedede" 
+                    TextColor="#1e1e1e" />
+           </StackLayout>
+
+        </StackLayout>
+        <StackLayout
+            Orientation="Vertical"
+            VerticalOptions="EndAndExpand"
+            Padding="0,0,0,20">
+            <BoxView
+                Margin="0,5" 
+                HeightRequest="1" 
+                Color="#f0f0f0" />
+            <Button 
+                Text="Logout" 
+                FontSize="16" 
+                FontAttributes="Bold" 
+                BorderWidth="2" 
+                BackgroundColor="#ff2d55"
+                BorderColor="#dedede" 
+                TextColor="#1e1e1e"
+                Clicked="OnLogoutClicked"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

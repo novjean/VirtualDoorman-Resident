@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    x:Class="VirtualDoorman.Views.GuestsAndDeliveries.GuestDetailPage">
+	<ContentPage.Content>
+        <StackLayout>
+            <TableView
+                Intent="Form"
+                HasUnevenRows="true" >
+                <TableView.Root>
+                    <TableSection>
+                        <EntryCell
+                            x:Name="firstName"
+                            Label="First Name"
+                            Text="{Binding FirstName}" />
+                        <EntryCell
+                            x:Name="lastName"
+                            Label="Last Name"
+                            Text="{Binding LastName}" />
+                    </TableSection>
+                    <TableSection
+                        Title="Contact">
+                        <EntryCell
+                            x:Name="email"
+                            Label="Email"
+                            Text="{Binding Email}" />
+                        <EntryCell
+                            x:Name="phone"
+                            Label="Phone"
+                            Text="{Binding Phone}" />
+                        <EntryCell
+                            x:Name="altPhone"
+                            Label="Alt Phone"
+                            Text="{Binding altPhone}" />
+                        <EntryCell
+                            x:Name="workPhone"
+                            Label="Work Phone"
+                            Text="{Binding workPhone}" />
+                        <ViewCell>
+                        <StackLayout
+                            Orientation="Horizontal"
+                            Padding="16,5">
+                            <Label 
+                                Text="Cell Provider" 
+                                VerticalOptions="Center"/>
+                            <Picker
+                                x:Name="pickerCellProvider"
+                                HorizontalOptions="EndAndExpand"
+                                WidthRequest="100"
+                                SelectedIndex="1">
+                            </Picker>
+                        </StackLayout>
+                    </ViewCell>
+                    </TableSection>
+                    <TableSection
+                        Title="Entry Permissions ">
+                        <ViewCell 
+                            Tapped="OnPermissionTypeTapped">
+                            <StackLayout
+                                Orientation="Vertical"
+                                Padding="16,10">
+                                <StackLayout
+                                    Orientation="Horizontal">
+                                    <Label
+                                        Text="Type"
+                                        VerticalOptions="Center" />
+                                    <Label
+                                        x:Name="permissionType"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="EndAndExpand"
+                                        Text="Any Day" 
+                                        TextColor="Gray"/>
+                                </StackLayout>
+                                <StackLayout
+                                    Orientation="Horizontal">
+                                    <Button
+                                        x:Name="btnMon"
+                                        Text="M"
+                                        BackgroundColor="Transparent"
+                                        BorderRadius="10"
+                                        HorizontalOptions="EndAndExpand"
+                                        Clicked="OnMonClicked"/>
+                                    <Button
+                                        x:Name="btnTue"
+                                        Text="T"
+                                        BorderRadius="10"
+                                        BackgroundColor="Transparent"
+                                        HorizontalOptions="EndAndExpand"
+                                        Clicked="OnTueClicked"/>
+                                    <Button
+                                        x:Name="btnWed"
+                                        Text="W"
+                                        BorderRadius="10"
+                                        BackgroundColor="Transparent"
+                                        HorizontalOptions="EndAndExpand"
+                                        Clicked="OnWedClicked"/>
+                                    <Button
+                                        x:Name="btnThur"
+                                        Text="T"
+                                        BorderRadius="10"
+                                        BackgroundColor="Transparent"
+                                        HorizontalOptions="EndAndExpand"
+                                        Clicked="OnThurClicked"/>
+                                    <Button
+                                        x:Name="btnFri"
+                                        Text="F"
+                                        BorderRadius="10"
+                                        BackgroundColor="Transparent"
+                                        HorizontalOptions="EndAndExpand"
+                                        Clicked="OnFriClicked"/>
+                                    <Button
+                                        x:Name="btnSat"
+                                        Text="S"
+                                        BorderRadius="10"
+                                        BackgroundColor="Transparent"
+                                        HorizontalOptions="EndAndExpand"
+                                        Clicked="OnSatClicked"/>
+                                    <Button
+                                        x:Name="btnSun"
+                                        Text="S"
+                                        BorderRadius="10"
+                                        BackgroundColor="Transparent"
+                                        HorizontalOptions="EndAndExpand"
+                                        Clicked="OnSunClicked"/>
+                                    
+                                </StackLayout>
+                                <StackLayout
+                                    Orientation="Horizontal">
+                                    <Label
+                                        Text="Start Date"
+                                        VerticalOptions="Center"/>
+                                    <DatePicker
+                                        Date="{x:Static sys:DateTime.Today}"
+                                        Format="d MMM yyyy"
+                                        HorizontalOptions="EndAndExpand"/>
+                                </StackLayout>
+                                <StackLayout
+                                    Orientation="Horizontal">
+                                    <Label
+                                        Text="End Date"
+                                        VerticalOptions="Center"/>
+                                    <DatePicker
+                                        Date="{x:Static sys:DateTime.Today}"
+                                        Format="d MMM yyyy" 
+                                        HorizontalOptions="EndAndExpand"/>
+                                </StackLayout>
+                                <StackLayout
+                                    Orientation="Horizontal">
+                                    <Label
+                                        Text="Start Time"
+                                        VerticalOptions="Center"/>
+                                    <TimePicker
+                                        x:Name="startTime"
+                                        Time="00:00"
+                                        HorizontalOptions="EndAndExpand"/>
+                                </StackLayout>
+                                <StackLayout
+                                    Orientation="Horizontal">
+                                    <Label
+                                        Text="End Time"
+                                        VerticalOptions="Center"/>
+                                    <TimePicker
+                                        x:Name="endTime"
+                                        Time="23:59" 
+                                        HorizontalOptions="EndAndExpand"/>
+                                </StackLayout>
+                            </StackLayout>
+                                
+                        </ViewCell>
+<!--                        <EntryCell
+                            x:Name="notes"
+                            Label="Notes"
+                            Text="{Binding Notes}" />-->
+                    </TableSection>
+
+                    <TableSection
+                        Title="Security">
+                        <ViewCell>
+                            <StackLayout
+                                Orientation="Vertical"
+                                Padding = "16,5">
+                                <StackLayout
+                                    Orientation="Horizontal" >
+                                    <Label 
+                                        Text="Passcode Required"
+                                        TextColor="Maroon"
+                                        VerticalOptions="Center"/>
+                                    <Switch
+                                        x:Name="switchSecurity"
+                                        HorizontalOptions="EndAndExpand"/>
+                                </StackLayout>
+
+                                <StackLayout
+                                    Padding="0,0,30,0"
+                                    HeightRequest="160"
+                                    IsVisible="{Binding Source={x:Reference switchSecurity}, Path=IsToggled}">
+                                    <Label
+                                        x:Name="lblSecretQuestion"
+                                        Text="Secret Question" />
+                                    <Entry 
+                                        Keyboard="Default"
+                                        Placeholder="Enter the guest's security question."
+                                        Text="{Binding SecretQuestion}"
+                                        x:Name="secretQuestion" />
+
+                                    <Label
+                                        Text="Passcode"
+                                        VerticalOptions="Center"/>
+                                    <Entry
+                                        Keyboard="Default"
+                                        Text="{Binding Passcode}"
+                                        x:Name="entryPasscode"/>
+
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                    
+                </TableView.Root>
+            </TableView>
+            <Button
+                Text="Save" />
+        </StackLayout>
+	</ContentPage.Content>
+</ContentPage>

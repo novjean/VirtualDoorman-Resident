@@ -1,0 +1,2 @@
+android.app.Application
+novjean.tk.virtualdoorman

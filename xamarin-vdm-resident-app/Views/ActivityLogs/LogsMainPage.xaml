@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    Title="Logs"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="VirtualDoorman.Views.ActivityLogs.LogsMainPage">
+	<ContentPage.Content>
+        <StackLayout
+            VerticalOptions="StartAndExpand"
+            Padding="0,10,0,0">
+            <StackLayout
+                Padding="5">
+                <BoxView 
+                    HeightRequest="10" 
+                    Color="#f0f0f0" />
+                <Button 
+                    Text="Guests Log" 
+                    FontSize="16" 
+                    FontAttributes="Bold" 
+                    BorderWidth="1" 
+                    BorderColor="#dedede" 
+                    TextColor="#1e1e1e" 
+                    Clicked="OnGuestsLogClicked"/>
+
+                <BoxView 
+                    HeightRequest="10" 
+                    Color="#f0f0f0" />
+                <Button 
+                    Text="Package Deliveries" 
+                    FontSize="16" 
+                    FontAttributes="Bold" 
+                    BorderWidth="1" 
+                    BorderColor="#dedede" 
+                    TextColor="#1e1e1e" 
+                    Clicked="OnPackageDeliveriesClicked"/>
+            </StackLayout>
+        </StackLayout>
+	</ContentPage.Content>
+</ContentPage>

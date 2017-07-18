@@ -1,0 +1,20 @@
+﻿<Properties StartupConfiguration="{0C7E0511-3337-4F01-B7CA-A10BF5A06C0C}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="VirtualDoorman/Views/MainPage.xaml">
+    <Files>
+      <File FileName="VirtualDoorman/Views/MainPage.xaml" Line="231" Column="1" />
+      <File FileName="VirtualDoorman/Views/GuestsAndDeliveries/GuestsAndDeliveriesMainPage.xaml" Line="74" Column="1" NotebookId="1" />
+      <File FileName="VirtualDoorman/Views/GuestsAndDeliveries/GuestsAndDeliveriesMainPage.xaml.cs" Line="43" Column="9" NotebookId="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/novjean/Documents/Xamarin/VirtualDoorman/VirtualDoorman/Views/OrderAccessCard/OrderAccessCardPageFour.xaml" relfile="VirtualDoorman/Views/OrderAccessCard/OrderAccessCardPageFour.xaml" line="15" column="1" />
+      <Breakpoint file="/Users/novjean/Documents/Xamarin/VirtualDoorman/VirtualDoorman/Views/MainPage.xaml" relfile="VirtualDoorman/Views/MainPage.xaml" line="86" column="21" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.VirtualDoorman.Droid PreferredExecutionTarget="Android.ZX1G222Q38" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.VirtualDoorman.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.9D6EF418-B481-4D1A-AA72-927AFF5CADBD" />
+  <MultiItemStartupConfigurations />
+</Properties>

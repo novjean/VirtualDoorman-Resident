@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7A8E930A-D3E5-48CB-8656-E97C65AEE714}</ProjectGuid>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <UseMSBuildEngine>true</UseMSBuildEngine>
+    <OutputType>Library</OutputType>
+    <RootNamespace>VirtualDoorman</RootNamespace>
+    <AssemblyName>VirtualDoorman</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App.xaml" />
+    <EmbeddedResource Include="VirtualDoormanPage.xaml" />
+    <EmbeddedResource Include="Views\LoginPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MainPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RegisterPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RegisterPage2.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TestPages\TestLogin.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OrderAccessCard\OrderAccessCardPageOne.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TestPages\ListRepeatComponentTestPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OrderAccessCard\OrderAccessCardPageTwo.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OrderAccessCard\KeyUsersPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OrderAccessCard\OrderAccessCardPageThree.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OrderAccessCard\OrderAccessCardPageFour.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OrderAccessCard\TermsAndConditionPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\GuestsAndDeliveries\GuestsAndDeliveriesMainPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\GuestsAndDeliveries\ViewGuestsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\GuestsAndDeliveries\GuestDetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\GuestsAndDeliveries\PermissionTypesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\GuestsAndDeliveries\ViewBusinessesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ActivityLogs\LogsMainPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ActivityLogs\GuestsLogPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ActivityLogs\DeliveryLogsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Contacts\ContactsMainPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VirtualDoormanPage.xaml.cs">
+      <DependentUpon>VirtualDoormanPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoginUser.cs" />
+    <Compile Include="Services\LoginService.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Views\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Constants.cs" />
+    <Compile Include="Views\RegisterPage.xaml.cs">
+      <DependentUpon>RegisterPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RegisterPage2.xaml.cs">
+      <DependentUpon>RegisterPage2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Services\RegisterService.cs" />
+    <Compile Include="Models\Result.cs" />
+    <Compile Include="Models\RegisterUser.cs" />
+    <Compile Include="Views\TestPages\TestLogin.xaml.cs">
+      <DependentUpon>TestLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OrderAccessCard\OrderAccessCardPageOne.xaml.cs">
+      <DependentUpon>OrderAccessCardPageOne.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrderKey.cs" />
+    <Compile Include="Views\TestPages\ListRepeatComponentTestPage.xaml.cs">
+      <DependentUpon>ListRepeatComponentTestPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OrderAccessCard\OrderAccessCardPageTwo.xaml.cs">
+      <DependentUpon>OrderAccessCardPageTwo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OrderAccessCard\KeyUsersPage.xaml.cs">
+      <DependentUpon>KeyUsersPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OrderAccessCard\OrderAccessCardPageThree.xaml.cs">
+      <DependentUpon>OrderAccessCardPageThree.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OrderAccessCard\OrderAccessCardPageFour.xaml.cs">
+      <DependentUpon>OrderAccessCardPageFour.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OrderAccessCard\TermsAndConditionPage.xaml.cs">
+      <DependentUpon>TermsAndConditionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GuestsAndDeliveries\GuestsAndDeliveriesMainPage.xaml.cs">
+      <DependentUpon>GuestsAndDeliveriesMainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GuestsAndDeliveries\ViewGuestsPage.xaml.cs">
+      <DependentUpon>ViewGuestsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Services\GuestsService.cs" />
+    <Compile Include="Views\GuestsAndDeliveries\GuestDetailPage.xaml.cs">
+      <DependentUpon>GuestDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GuestsAndDeliveries\PermissionTypesPage.xaml.cs">
+      <DependentUpon>PermissionTypesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GuestsAndDeliveries\ViewBusinessesPage.xaml.cs">
+      <DependentUpon>ViewBusinessesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BusinessModels\BusinessResponse.cs" />
+    <Compile Include="Models\BusinessModels\Business.cs" />
+    <Compile Include="Services\BusinessService.cs" />
+    <Compile Include="Views\ActivityLogs\LogsMainPage.xaml.cs">
+      <DependentUpon>LogsMainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ActivityLogs\GuestsLogPage.xaml.cs">
+      <DependentUpon>GuestsLogPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GuestModels\Guest.cs" />
+    <Compile Include="Models\GuestModels\GuestResponse.cs" />
+    <Compile Include="Models\GuestModels\GuestPermissions.cs" />
+    <Compile Include="Services\GuestsLogService.cs" />
+    <Compile Include="Models\GuestLogModels\GuestLogResponse.cs" />
+    <Compile Include="Models\GuestLogModels\LogReport.cs" />
+    <Compile Include="Views\ActivityLogs\DeliveryLogsPage.xaml.cs">
+      <DependentUpon>DeliveryLogsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BusinessLogModels\BusinessLogResponse.cs" />
+    <Compile Include="Models\BusinessLogModels\DeliveryReport.cs" />
+    <Compile Include="Services\BusinessLogService.cs" />
+    <Compile Include="Views\Contacts\ContactsMainPage.xaml.cs">
+      <DependentUpon>ContactsMainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ContactModels\ContactsResponse.cs" />
+    <Compile Include="Models\ContactModels\Contact.cs" />
+    <Compile Include="Services\ContactService.cs" />
+    <Compile Include="Models\OrderKeyModels\Cart.cs" />
+    <Compile Include="Models\OrderKeyModels\CardListResponse.cs" />
+    <Compile Include="Models\OrderKeyModels\CardData.cs" />
+    <Compile Include="Services\CardDataService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\" />
+    <Folder Include="Models\" />
+    <Folder Include="Services\" />
+    <Folder Include="Views\TestPages\" />
+    <Folder Include="Views\OrderAccessCard\" />
+    <Folder Include="Views\GuestsAndDeliveries\" />
+    <Folder Include="Models\BusinessModels\" />
+    <Folder Include="Views\ActivityLogs\" />
+    <Folder Include="Models\GuestModels\" />
+    <Folder Include="Models\GuestLogModels\" />
+    <Folder Include="Models\BusinessLogModels\" />
+    <Folder Include="Views\Contacts\" />
+    <Folder Include="Models\ContactModels\" />
+    <Folder Include="Models\OrderKeyModels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.247\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform">
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.247\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.247\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net45+win8+wpa81\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net45+win8+wpa81\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageCircle.Forms.Plugin.Abstractions">
+      <HintPath>..\packages\Xam.Plugins.Forms.ImageCircle.1.8.1\lib\portable-net45+wp80+win8+wpa81\ImageCircle.Forms.Plugin.Abstractions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+</Project>

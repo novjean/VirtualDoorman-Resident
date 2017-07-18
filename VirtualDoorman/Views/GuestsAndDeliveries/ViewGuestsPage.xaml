@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    Title="View Guests"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="VirtualDoorman.Views.GuestsAndDeliveries.ViewGuestsPage">
+	<ContentPage.Content>
+        <StackLayout
+            VerticalOptions="StartAndExpand"
+            Padding="0,10,0,0">
+            <StackLayout
+                Padding="5">
+                <ListView
+                    x:Name="guestListView"
+                    ItemSelected="OnGuestSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell
+                                Text="{Binding FirstName}"
+                                Detail="{Binding Notes}" />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </StackLayout>
+        </StackLayout>
+	</ContentPage.Content>
+</ContentPage>

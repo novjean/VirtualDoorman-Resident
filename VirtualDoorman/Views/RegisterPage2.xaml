@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    Title="Sign Up"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="VirtualDoorman.RegisterPage2">
+    <StackLayout>
+        <TableView 
+            Intent="Form"
+            HasUnevenRows="true">
+            <TableRoot>
+
+                <TableSection 
+                    Title="Security">
+                    <ViewCell>
+                        <StackLayout
+                            Orientation="Horizontal"
+                            HorizontalOptions="FillAndExpand"
+                            Padding="16,5">
+                            <Label
+                                FontSize="12"
+                                Text="In the event that you are locked out of your building, the Virtual Doorman™ can grant you access provided that you have given a security question to ask. If you have a key safe in your package room, you can then retrieve your spare set of apartment keys. The Virtual Doorman™ does not grant access to your individual apartment. For security purposes, use a unique question that is different from other security questions that banks and credit card companies would use. This question should be specific the answer should only be known by you."
+                                />
+                        </StackLayout>
+                            
+                    </ViewCell>
+                    <EntryCell 
+                        x:Name="secretQuestion" 
+                        Label="Secret Question" 
+                        Text="" />
+                    <EntryCell 
+                        x:Name="secretAnswer"
+                        Label="Answer" 
+                        Text="" />
+                </TableSection>
+
+                <TableSection 
+                    Title="Building Information">
+                    <EntryCell 
+                        x:Name="address" 
+                        Label="Address" 
+                        Text="" 
+                        Keyboard="Default" />
+                    <EntryCell 
+                        x:Name="apartment_number" 
+                        Label="Apartment #" 
+                        Text="" 
+                        Keyboard="Default" />
+                    
+<!--                    <ViewCell>
+                        <StackLayout 
+                            Orientation="Horizontal"
+                            Padding="16, 5">
+                            <Label 
+                                Text="Region" 
+                                VerticalOptions="Center"/>
+                            <Picker 
+                                x:Name="regionPicker" 
+                                Title="Select Region"
+                                HorizontalOptions="EndAndExpand">
+                            </Picker>
+                        </StackLayout>
+                    </ViewCell>-->
+                    
+                    <ViewCell>
+                        <StackLayout 
+                            Orientation="Horizontal"
+                            Padding="16, 5">
+                            <Label 
+                                Text="State" 
+                                VerticalOptions="Center"/>
+                            <Picker 
+                                x:Name="statePicker" 
+                                Title="Select State"
+                                HorizontalOptions="EndAndExpand">
+                            </Picker>
+                        </StackLayout>
+                    </ViewCell>
+                    
+                    <ViewCell>
+                        <StackLayout 
+                            Orientation="Horizontal"
+                            Padding="16, 5">
+                            <Label 
+                                Text="City" 
+                                VerticalOptions="Center"/>
+                            <Picker 
+                                x:Name="cityPicker" 
+                                Title="Select City"
+                                HorizontalOptions="EndAndExpand">
+                            </Picker>
+                        </StackLayout>
+                    </ViewCell>
+                    
+                </TableSection>
+                
+                <TableSection>
+                    <ViewCell>
+                        <StackLayout Padding="16,5">   
+                            <StackLayout
+                                Orientation="Horizontal">
+                                <Label
+                                    Text="Accept Terms and Conditions"
+                                    FontSize="14"
+                                    VerticalOptions="Center"/>
+                                <Button
+                                    Text="View Details" 
+                                    VerticalOptions="Center"
+                                    Clicked="buttonViewTerms"/>
+                                <Switch
+                                    x:Name="switchTerms"
+                                    HorizontalOptions="EndAndExpand"
+                                    IsToggled="false" />
+                            </StackLayout>
+                            <Button 
+                                IsVisible="{Binding Source={x:Reference switchTerms}, Path=IsToggled}"
+                                Text="Save" 
+                                Clicked="OnSaveClicked" />
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+
+            </TableRoot>
+        </TableView>
+    </StackLayout>
+</ContentPage>

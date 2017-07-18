@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    Title="Card/Fob"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="VirtualDoorman.Views.OrderAccessCard.OrderAccessCardPageOne">
+	<ContentPage.Content>
+        <StackLayout>
+            <TableView 
+                HasUnevenRows="true"
+                Intent="Form">
+                <TableRoot>
+                    <TableSection 
+                        Title="Number of Cards/FOB's">
+                        <ViewCell>
+                            <StackLayout
+                                Orientation="Horizontal"
+                                Padding="16">
+                                <Label
+                                    Text="Fob Count"
+                                    VerticalOptions="Center"/>
+                                <Picker
+                                    x:Name="fobCount"
+                                    HorizontalOptions="EndAndExpand">
+                                    <Picker.Items>
+                                        <x:String>0</x:String>
+                                        <x:String>1</x:String>
+                                        <x:String>2</x:String>
+                                        <x:String>3</x:String>
+                                        <x:String>4</x:String>
+                                        <x:String>5</x:String>
+                                        <x:String>6</x:String>
+                                        <x:String>7</x:String>
+                                        <x:String>8</x:String>
+                                        <x:String>9</x:String>
+                                        <x:String>10</x:String>
+                                        <x:String>11</x:String>
+                                        <x:String>12</x:String>
+                                    </Picker.Items>
+                                </Picker>
+                            </StackLayout>
+                        </ViewCell>
+
+                        <ViewCell>
+                            <StackLayout
+                                Orientation="Horizontal"
+                                Padding="16">
+                                <Label
+                                    Text="Card Count"
+                                    VerticalOptions="Center"/>
+                                <Picker
+                                    x:Name="cardCount"
+                                    HorizontalOptions="EndAndExpand">
+                                    <Picker.Items>
+                                        <x:String>0</x:String>
+                                        <x:String>1</x:String>
+                                        <x:String>2</x:String>
+                                        <x:String>3</x:String>
+                                        <x:String>4</x:String>
+                                        <x:String>5</x:String>
+                                        <x:String>6</x:String>
+                                        <x:String>7</x:String>
+                                        <x:String>8</x:String>
+                                        <x:String>9</x:String>
+                                        <x:String>10</x:String>
+                                        <x:String>11</x:String>
+                                        <x:String>12</x:String>
+                                    </Picker.Items>
+                                </Picker>
+                            </StackLayout>
+                        </ViewCell>
+                            
+                        <!--<ViewCell Height="50">
+                            <StackLayout
+                                Orientation="Horizontal"
+                                Padding="16">
+                                <Label 
+                                    Text="Fob Count"
+                                    VerticalOptions="Center"/>
+                                <Slider 
+                                    x:Name="sliderFobCounter"
+                                    Maximum="12" 
+                                    Minimum="0" 
+                                    Value="0" 
+                                    HorizontalOptions="CenterAndExpand"/>
+                                <Label
+                                    x:Name="labelFobSliderValue"
+                                    Text="{Binding Source={x:Reference sliderFobCounter}, 
+                                        Path=Value, 
+                                        StringFormat='{0:N0}'}" 
+                                    HorizontalOptions="End"/>
+                            </StackLayout>
+                        </ViewCell>-->
+                        <!--<ViewCell Height="50">
+                            <StackLayout
+                                Orientation="Horizontal"
+                                Padding="16">
+                                <Label 
+                                    Text="Card Count"
+                                    VerticalOptions="Center"/>
+                                <Slider 
+                                    x:Name="sliderCardCounter"
+                                    Maximum="12" 
+                                    Minimum="0" 
+                                    Value="0" 
+                                    HorizontalOptions="CenterAndExpand"/>
+                                <Label
+                                    x:Name="labelCardSliderValue"
+                                    Text="{Binding Source={x:Reference sliderCardCounter}, 
+                                        Path=Value, 
+                                        StringFormat='{0:N0}'}" 
+                                    HorizontalOptions="End"/>
+                            </StackLayout>
+                        </ViewCell>-->
+                    </TableSection>
+                    <!--<TableSection 
+                        Title="Key Access">
+                        <ViewCell>
+                            <StackLayout 
+                                Orientation="Horizontal"
+                                Padding="16">
+                                <Label 
+                                    Text="Cards/Fobs for Guests"
+                                    VerticalOptions="Center" />
+                                <Switch 
+                                    IsToggled="true" 
+                                    x:Name="switchKeysForGuests" 
+                                    HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>-->
+                    
+                    <TableSection>
+                        <ViewCell>
+                            <Button 
+                                Text="Continue"
+                                Clicked="ContinueClicked"/>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </StackLayout>
+	</ContentPage.Content>
+</ContentPage>
